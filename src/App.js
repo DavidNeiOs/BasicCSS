@@ -10,14 +10,27 @@ import StartHosting from './components/startHosting/startHosting';
 import './App.css';
 
 class App extends Component {
+  constructor () {
+    super();
+    this.state = {
+      sideBarShown: false
+    }
+  }
+
+  showSideBar = () => {
+    this.setState({ sideBarShown: !this.state.sideBarShown })
+  }
   
   render() {
     return (
       <BrowserRouter>
         <div>
-          
-          <HeaderComponent></HeaderComponent>
-          <SideBar></SideBar>
+          <HeaderComponent showSideBar={() => this.showSideBar()}></HeaderComponent>
+          {this.state.sideBarShown ?
+            <SideBar showSideBar={() => this.showSideBar()}></SideBar>
+            :
+            null
+          }
           <Route path="/" component={MainComponent} exact></Route>
           <Route path="/packages" component={PackagesComponent}></Route>
           <Route path="/customers" component={CustomersComponent}></Route>

@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 import "./headerComponent.css";
 
 class HeaderComponent extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <header className="main-header">
         <div id="main-header__logo">
-        <button className="toggle-button">
+          <button className="toggle-button" onClick={this.props.showSideBar}>
             <span className="toggle-button__bar" />
             <span className="toggle-button__bar" />
             <span className="toggle-button__bar" />

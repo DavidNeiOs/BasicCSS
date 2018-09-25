@@ -1,5 +1,13 @@
+.mobile-nav-container {
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    background: transparent;
+    width: 100vw;
+    height: 100vh;
+}
 .mobile-nav {
-    display: none;
     position: fixed;
     z-index: 101;
     top: 0;
