@@ -1,0 +1,121 @@
+.main-cmp {
+    margin: 0;
+    padding: 0;
+}
+#product-overview {
+    background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent), url("assets/images/girl-sea.jpg") center/cover no-repeat border-box, #5b09ff;
+
+    /* background-image: url("assets/images/girl-sea.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; */
+    /* background-position: center;
+    background-origin: border-box;
+    background-clip: padding-box; */
+    /* background-image: linear-gradient(red, blue, gray); */
+    /* background-image: radial-gradient(circle farthest-corner at 20% 50%,red, blue 70%, green); */
+   
+    width: 100vw;
+    height: 40vh;
+    margin-top: 3em;
+    /* border: 5px dashed red; */
+    position: relative;
+}
+#product-overview h1 {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    font-size: 2em;
+}
+.section-title {
+    color: #ffad09;
+    text-align: center;
+}
+.plan__list {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.plans {
+    text-align: center;
+}
+.plan {
+    background: #ffd787;
+    text-align: center;
+    padding: 1em;
+    margin: .5em .5em;
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+}
+.plan--highlighted {
+    background-color: #ffad09;
+    color: white;
+    box-shadow: .15em .15em .15em .15em rgba(0, 0, 0, 0.3);
+}
+.plan__annotation {
+    background-color: white;
+    color: #f87c34;
+    box-shadow: 0.07em 0.07em .07em .07em rgba(35, 255, 135, 0.5);
+    padding: 0.3em 0;
+    border-radius: .25em;
+}
+.plan__title {
+    color: #d34d00;
+}
+.plan__price {
+    color: #5f5f5f;
+}
+.plan--highlighted .plan__title {
+    color: white;
+}
+.plan--highlighted .plan__price{
+    color: #d34d00;
+}
+.plan__features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.plan__feature {
+    margin: 0.5em 0;
+}
+
+
+/*
+    Key features section
+*/
+
+#key-features {
+    background-color: #5b09ff;
+    margin-top: 5em;
+    padding: 1em;
+}
+#key-features .section-title {
+    color: white;
+    margin: 2rem;
+}
+.key-features__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.key-feature {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+}
+.key-feature__image {
+    background: #af90ee;
+    width: 8em;
+    height: 8em;
+    border: 0.15em solid green;
+    border-radius: 50%;
+    margin: auto;
+    padding: 1.25em;
+}
+.key-feature__description {
+    font-weight: bold;
+    color: white;
+    font-size: 1.25em;
+}
