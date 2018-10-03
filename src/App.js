@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import ScrollToTop from './scrollToTop';
 import HeaderComponent from './components/header/headerComponent';
 import SideBar from './components/sideBar/sideBar';
 import MainComponent from './components/main/mainComponent'
@@ -24,19 +25,21 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
-          <HeaderComponent showSideBar={() => this.showSideBar()}></HeaderComponent>
-          {this.state.sideBarShown ?
-            <SideBar showSideBar={() => this.showSideBar()}></SideBar>
-            :
-            null
-          }
-          <Route path="/" component={MainComponent} exact></Route>
-          <Route path="/packages" component={PackagesComponent}></Route>
-          <Route path="/customers" component={CustomersComponent}></Route>
-          <Route path="/startHosting" component={StartHosting}></Route>
-          <FooterComponent></FooterComponent>
-        </div>  
+        <ScrollToTop>
+          <div>
+            <HeaderComponent showSideBar={() => this.showSideBar()}></HeaderComponent>
+            {this.state.sideBarShown ?
+              <SideBar showSideBar={() => this.showSideBar()}></SideBar>
+              :
+              null
+            }
+            <Route path="/" component={MainComponent} exact></Route>
+            <Route path="/packages" component={PackagesComponent}></Route>
+            <Route path="/customers" component={CustomersComponent}></Route>
+            <Route path="/startHosting" component={StartHosting}></Route>
+            <FooterComponent></FooterComponent>
+          </div>
+        </ScrollToTop>
       </BrowserRouter>
     );
   }

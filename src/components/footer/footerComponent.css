@@ -1,6 +1,6 @@
 .main-footer {
     background-color: black;
-    padding: 2em;
+    padding: 1em;
     margin-top: 3em;
 }
 .main-footer__links {
@@ -10,8 +10,19 @@
     text-align: center;
 }
 .main-footer__link {
-    display: inline-block;
-    margin: 0 1em;
+    display: block;
+    margin: 1em 0;
+    width: 100%;
+}
+@media (min-width: 42rem) {
+    .main-footer {
+        padding: 2em;
+    }
+    .main-footer__link {
+        display: inline-block;
+        margin: 0 1em;
+        width: 15%;
+    }
 }
 .main-footer__link a {
     color: white;
