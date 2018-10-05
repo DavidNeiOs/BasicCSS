@@ -35,7 +35,7 @@ class HeaderComponent extends Component {
             <li className="main-nav__item">
               <Link
                 className="main-nav__links main-nav__links--cta"
-                to="/start-hosting"
+                to="/startHosting"
               >
                 Start hosting
               </Link>

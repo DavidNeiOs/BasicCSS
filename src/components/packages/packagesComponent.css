@@ -1,6 +1,6 @@
 .packages-overview {
     padding-top: 3rem;
-    min-height: calc(100vh - 3rem - 4rem);
+    min-height: calc(100vh - 5rem);
 }
 .packages-background {
     background: url("./assets/images/plans-background.jpg") center/cover;
@@ -11,7 +11,7 @@
     z-index: -1;
 }
 .packages-plan {
-    background-color: rgba(255, 233, 208, 0.966);
+    background-color: rgba(255, 233, 208, 0.965);
     border: 0.2em solid #da9100;
     border-left: none;
     width: 80%;
@@ -66,7 +66,7 @@
     clear: both;
 }
 .packages-plan__highlighted {
-    background-color: rgba(218, 145, 0, 0.945);
+    background-color: rgba(219, 146, 0, 0.945);
 }
 .packages-plan__highlighted h1 {
     color: white;
