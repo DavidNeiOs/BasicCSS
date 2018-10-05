@@ -4,8 +4,7 @@ import './customersComponent.css';
 class CustomersComponent extends Component {
   render() {
     return (
-      <main>
-        <div>
+      <main className="main-customers">
           <div className="testimonial" id="customer-1">
             <div className="testimonial__image-container">
               <img
@@ -45,7 +44,6 @@ class CustomersComponent extends Component {
               />
             </div>
           </div>
-        </div>
       </main>
     );
   }

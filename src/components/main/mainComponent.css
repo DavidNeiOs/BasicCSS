@@ -27,7 +27,7 @@
     font-size: 2rem;
 }
 
-@media (min-width: 42rem) {
+@media (min-width: 42rem) and (min-height: 42rem) {
     #product-overview {
         height: 50vh;
     }

@@ -1,5 +1,6 @@
 .packages-overview {
-    padding-top: 3em;
+    padding-top: 3rem;
+    min-height: calc(100vh - 3rem - 4rem);
 }
 .packages-background {
     background: url("./assets/images/plans-background.jpg") center/cover;
@@ -72,4 +73,20 @@
 }
 .packages-plan__highlighted .packages-plan__feature {
     color: #ccc;
+}
+
+@media (min-width: 42rem) {
+    .main-packages {
+        margin: 0 auto;
+        max-width: 1300px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .packages-plan {
+        border-left: 0.2em solid #da9100;
+    }
+    #free {
+        border-right: 0.2em solid #da9100;
+    }
 }
