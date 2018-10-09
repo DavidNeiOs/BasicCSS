@@ -5,9 +5,9 @@ import "./packagesComponent.css";
 class PackagesComponent extends Component {
   render() {
     return (
-      <div className="packages-overview">
+      <main className="packages-overview">
         <div className="packages-background" />
-        <main className="main-packages">
+        <div className="main-packages">
           <section className="packages-plan" id="plus">
             <Link to="/packages/plus" className="packages-plan__link">
               <h1 className="packages-plan__title">Our PLUS Plan</h1>
@@ -49,8 +49,8 @@ class PackagesComponent extends Component {
               </p>
             </Link>
           </section>
-        </main>
-      </div>
+        </div>
+      </main>
     );
   }
 }

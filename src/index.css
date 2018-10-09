@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Acme");
+
 * {
   box-sizing: border-box;
 }
@@ -7,8 +9,24 @@ html {
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
+  height: 100%;
 }
-
+#root {
+  height: 100%;
+}
+.grid-container {
+  display: grid;
+  grid-template-rows: 3.5rem auto fit-content(5rem);
+  /* padding-top: 3.5rem; */
+  height: 100%;
+  grid-template-areas: "header"
+                       "main"
+                       "footer";
+}
+main {
+  /* grid-row: 2 / 3; */
+  grid-area: main;
+}
 body::-webkit-scrollbar {
   width: 0;
 }
@@ -33,4 +51,11 @@ h1, h2, h3, h4 {
 }
 .button:focus{
   outline: none;
+}
+.button[disabled] {
+  cursor: not-allowed;
+  border: #acacac;
+  background: #ccc;
+  color: #acacac;
+  
 }

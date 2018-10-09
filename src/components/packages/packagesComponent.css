@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Mali:400,700');
+
+/*@font-face {
+    font-family: "AnonymousPro";
+    src: url("anonymousPro-Regular.woff") format("woff"),
+         url("anonymousPro-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "AnonymousPro";
+    src: url("anonymousPro-Bold.ttf");
+    font-weight: 700;
+}*/
+
 .packages-overview {
-    padding-top: 3rem;
-    min-height: calc(100vh - 5rem);
+    /* padding-top: 3rem; */
+    /* min-height: calc(100vh - 5rem); */
 }
 .packages-background {
     background: url("./assets/images/plans-background.jpg") center/cover;
@@ -18,6 +31,7 @@
     margin: 1em 0;
     position: relative;
     z-index: 0;
+    overflow: hidden;
 }
 .packages-plan:hover,
 .packages-plan:active{
@@ -33,11 +47,16 @@
 .packages-plan__badge {
     position: absolute;
     top:0;
-    right: 1em;
-    font-size: 0.75em;
+    right: 0;
+    margin: 0;
+    font-size: 0.75rem;
     color: white;
     background-color: #5b09ff;
     padding: .5em;
+    transform: rotateZ(45deg) translateX(3rem, -1rem);
+    transform-origin: center;
+    width: 10rem;
+    text-align: center;
 }
 .packages-plan__feature{
     color: #b6b6b6;
@@ -48,6 +67,15 @@
     background-color: white;
     padding: 1em;
     border: 0.2em solid #da9100;
+    /* font-family: "Mali", sans-serif; */
+    /* font-weight: 700; */
+    /* line-height: 2; space of content */
+    /* font: status-bar; default browser fonts style*/
+    font: 700 1.2rem "Mali", sans-serif;
+    /* font-style font-variant font-weight font-size/line height font-family min 2 las values*/
+    /* text-decoration: underline wavy red; */
+    /* text-shadow: 2px 2px 7px rgb(187, 183, 183); */
+    
 }
 #plus{
     background: rgba(243, 205, 170, 0.952)

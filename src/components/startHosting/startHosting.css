@@ -1,8 +1,7 @@
 .signup-page {
-    margin-top: 3.5rem;
-    padding-top: 1rem;
-    min-height: calc(100vh - 9.5rem);
+    /* min-height: calc(100vh - 9.5rem); */
     box-sizing: border-box;
+    align-self: center;
 }
 .signup-title {
     text-align: center;
@@ -12,6 +11,9 @@
 
 .signup-form {
     padding: 1rem;
+    display: grid;
+    grid-auto-rows: 2rem;
+    grid-row-gap: .5rem;
 }
 .signup-form label {
     font-weight: bold;
@@ -21,7 +23,6 @@
 .signup-form input,
 .signup-form select {
     display: block;
-    margin-top: 1rem;
     width: 100%;
 }
 
@@ -71,6 +72,16 @@
 @media (min-width: 42rem) {
     .signup-form {
         margin: auto;
-        width: 25rem;
+        width: 30rem;
+        grid-template-columns: 10rem auto;
+        grid-row-gap: 1rem;
+        grid-column-gap: .5rem;
+        
+    }
+    select {
+        grid-column: span 2;
+    }
+    .signup-form__checkbox {
+        grid-column: span 2;
     }
 }

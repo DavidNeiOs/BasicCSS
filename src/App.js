@@ -26,7 +26,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <ScrollToTop>
-          <div>
+          <div className="grid-container">
             <HeaderComponent showSideBar={() => this.showSideBar()}></HeaderComponent>
             {this.state.sideBarShown ?
               <SideBar showSideBar={() => this.showSideBar()}></SideBar>

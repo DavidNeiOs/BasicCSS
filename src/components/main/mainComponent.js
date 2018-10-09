@@ -20,7 +20,7 @@ class MainComponent extends Component {
 
   render() {
     return (
-      <div className="main-cmp">
+      <main className="main-cmp">
         { this.state.backdropShown ?
           <BackdropComponent showBackdrop={() => this.showBackdrop()}></BackdropComponent>
           :
@@ -104,7 +104,7 @@ class MainComponent extends Component {
             </li>
           </ul>
         </section>
-      </div>
+      </main>
     );
   }
 }

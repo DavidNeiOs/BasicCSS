@@ -17,10 +17,18 @@ class StartHosting extends Component {
       }
       this.isCompleted = this.isCompleted.bind(this);
       this.handleChange = this.handleChange.bind(this);
+      this.validateField = this.validateField.bind(this);
+  }
+  validateField(fieldName) {
+    let form = this.state.form;
+    if(form[fieldName] === ''){
+      this.setState({formCompleted: false})
+    }
   }
   isCompleted(){
+    let invalids = document.querySelectorAll(':invalid');
     for(let field in this.state.form){
-      if(this.state.form[field] === ""){
+      if(this.state.form[field] === "" || invalids.length){
         return false;
       }
     }
@@ -40,7 +48,7 @@ class StartHosting extends Component {
         this.setState({
             form: change,
             formCompleted: this.isCompleted()
-        });
+        }, () => {this.validateField(name)});
     }
   }
   render() {
@@ -89,19 +97,28 @@ class StartHosting extends Component {
             name="password"
             onChange={this.handleChange}
             value={this.state.form.password}
+            minLength={4}
           />
-          <input 
-            type="checkbox" 
-            id="agree-terms"
-            name="termsAgreed"
-            checked={this.state.termsAgreed}
-            onChange={this.handleChange}
-         />
-          <label htmlFor="agree-terms">
-            Agree to
+          <div className="signup-form__checkbox">
+            <input
+              type="checkbox"
+              id="agree-terms"
+              name="termsAgreed"
+              checked={this.state.termsAgreed}
+              onChange={this.handleChange}
+            />
+            <label htmlFor="agree-terms">
+              Agree to
             <a>Terms &amp; Conditions</a>
-          </label>
-          <input type="submit" className="button" value="Sign Up"/>
+            </label>
+          </div>
+          
+          <input 
+            type="submit" 
+            className="button" 
+            value="Sign Up"
+            disabled={!(this.state.formCompleted && this.state.termsAgreed)}
+          />
         </form>
       </main>
     );
