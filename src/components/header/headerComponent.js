@@ -32,7 +32,7 @@ class HeaderComponent extends Component {
                 Customers
               </Link>
             </li>
-            <li className="main-nav__item">
+            <li className="main-nav__item main-nav__item--cta">
               <Link
                 className="main-nav__links main-nav__links--cta"
                 to="/startHosting"
