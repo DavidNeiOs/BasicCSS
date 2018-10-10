@@ -12,6 +12,12 @@ class BackdropComponent extends Component {
   }
 
   componentDidMount() {
+    let bd = document.querySelector('.backdrop');
+    let modal = document.querySelector('.modal');
+    setTimeout(function(){
+      modal.classList.add('open');
+      bd.classList.add('open');
+    }, 10);
     this.setState({ backdrop: document.querySelector('.backdrop') });
     window.addEventListener('click', this.outsideClick);
   }

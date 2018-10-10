@@ -6,6 +6,8 @@
     background: transparent;
     width: 100vw;
     height: 100vh;
+    opacity: 0;
+    transition: opacity .5s;
 }
 .mobile-nav {
     position: fixed;
@@ -15,6 +17,8 @@
     background: white;
     width: 80%;
     height: 100vh;
+    transform: translateX(-80vw);
+    transition: transform .3s;
 }
 
 .mobile-nav__items {
@@ -50,4 +54,8 @@
     color: #5b09ff;
     background-color: white;
     border: none;
+}
+.open {
+    opacity: 1;
+    transform: translateX(0);
 }
