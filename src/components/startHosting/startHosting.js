@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./startHosting.css";
+import "./startHosting.scss";
 
 class StartHosting extends Component {
   constructor() {

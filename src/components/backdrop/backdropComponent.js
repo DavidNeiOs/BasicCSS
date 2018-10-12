@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./backdropComponent.css";
+import "./backdropComponent.scss";
 
 class BackdropComponent extends Component {
   constructor(props) {

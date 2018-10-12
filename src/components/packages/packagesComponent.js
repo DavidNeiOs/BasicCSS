@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./packagesComponent.css";
+import "./packagesComponent.scss";
 
 class PackagesComponent extends Component {
   render() {

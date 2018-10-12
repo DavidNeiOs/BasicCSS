@@ -8,7 +8,7 @@ import FooterComponent from './components/footer/footerComponent'
 import PackagesComponent from './components/packages/packagesComponent';
 import CustomersComponent from './components/customers/customersComponent';
 import StartHosting from './components/startHosting/startHosting';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   constructor () {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import BackdropComponent from '../backdrop/backdropComponent';
-import "./mainComponent.css";
+import "./mainComponent.scss";
 import image1 from './assets/svg/svg1.svg';
 import image2 from './assets/svg/svg2.svg';
 import image3 from './assets/svg/svg3.svg';
