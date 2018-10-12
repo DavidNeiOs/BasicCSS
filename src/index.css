@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Acme");
 
+:root {
+  --cherry: #d34d00;
+}
 * {
   box-sizing: border-box;
 }
@@ -15,14 +18,21 @@ body {
   height: 100%;
 }
 .grid-container {
-  display: grid;
-  grid-template-rows: 3.5rem auto fit-content(5rem);
-  /* padding-top: 3.5rem; */
-  height: 100%;
-  grid-template-areas: "header"
-                       "main"
-                       "footer";
+  padding-top: 3.5rem;
 }
+
+@supports (display: grid) {
+  .grid-container {
+    display: grid;
+    padding-top: 0;
+    grid-template-rows: 3.5rem auto fit-content(5rem);
+    height: 100%;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+  }
+}
+
 main {
   /* grid-row: 2 / 3; */
   grid-area: main;
@@ -35,10 +45,10 @@ h1, h2, h3, h4 {
 }
 
 .button {
-  background-color: #d34d00;
+  background-color: var(--cherry);
   color: white;
   font: inherit;
-  border: 2px solid #d34d00;
+  border: 2px solid var(--cherry);
   padding: .5em;
   border-radius: .5em;
   font-weight: bold;
@@ -47,7 +57,7 @@ h1, h2, h3, h4 {
 .button:hover,
 .button:active {
   background-color: white;
-  color: #d34d00;
+  color: var(--cherry);
 }
 .button:focus{
   outline: none;
